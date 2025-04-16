@@ -78,6 +78,10 @@ crypto
 3.4
 file:///Users/jonghokim/.pub-cache/hosted/pub.dev/crypto-3.0.6/
 file:///Users/jonghokim/.pub-cache/hosted/pub.dev/crypto-3.0.6/lib/
+cupertino_icons
+3.1
+file:///Users/jonghokim/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.8/
+file:///Users/jonghokim/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.8/lib/
 dart_style
 3.4
 file:///Users/jonghokim/.pub-cache/hosted/pub.dev/dart_style-3.0.1/
@@ -178,10 +182,6 @@ path
 3.0
 file:///Users/jonghokim/.pub-cache/hosted/pub.dev/path-1.9.0/
 file:///Users/jonghokim/.pub-cache/hosted/pub.dev/path-1.9.0/lib/
-plugin_platform_interface
-3.0
-file:///Users/jonghokim/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8/
-file:///Users/jonghokim/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8/lib/
 pool
 2.12
 file:///Users/jonghokim/.pub-cache/hosted/pub.dev/pool-1.5.1/

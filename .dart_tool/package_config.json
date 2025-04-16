@@ -122,6 +122,12 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "cupertino_icons",
+      "rootUri": "file:///Users/jonghokim/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.8",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
       "name": "dart_style",
       "rootUri": "file:///Users/jonghokim/.pub-cache/hosted/pub.dev/dart_style-3.0.1",
       "packageUri": "lib/",
@@ -284,12 +290,6 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "plugin_platform_interface",
-      "rootUri": "file:///Users/jonghokim/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
       "name": "pool",
       "rootUri": "file:///Users/jonghokim/.pub-cache/hosted/pub.dev/pool-1.5.1",
       "packageUri": "lib/",
@@ -434,7 +434,7 @@
       "languageVersion": "3.6"
     }
   ],
-  "generated": "2025-04-16T03:52:47.348336Z",
+  "generated": "2025-04-16T07:49:31.531019Z",
   "generator": "pub",
   "generatorVersion": "3.6.0",
   "flutterRoot": "file:///Users/jonghokim/development/flutter",
