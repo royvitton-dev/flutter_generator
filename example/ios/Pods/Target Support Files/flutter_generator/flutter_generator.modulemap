@@ -1,0 +1,6 @@
+framework module flutter_generator {
+  umbrella header "flutter_generator-umbrella.h"
+
+  export *
+  module * { export * }
+}
