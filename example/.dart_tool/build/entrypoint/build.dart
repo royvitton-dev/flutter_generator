@@ -20,10 +20,10 @@ final _builders = <_i1.BuilderApplication>[
     appliesBuilders: const [r'source_gen:part_cleanup'],
   ),
   _i1.apply(
-    r'flutter_generator_example:testcode',
+    r'flutter_generator_sample:testcode',
     [_i3.testcodeBuilder],
     _i1.toRoot(),
-    hideOutput: false,
+    hideOutput: true,
     defaultGenerateFor: const _i4.InputSet(
       include: [
         r'lib/*.dart',
@@ -38,27 +38,8 @@ final _builders = <_i1.BuilderApplication>[
         <String, dynamic>{r'output_directory': r'test'}),
   ),
   _i1.apply(
-    r'flutter_generator_example:sequence',
+    r'flutter_generator_sample:sequence',
     [_i3.sequenceBuilder],
-    _i1.toRoot(),
-    hideOutput: false,
-    defaultGenerateFor: const _i4.InputSet(
-      include: [
-        r'lib/*.dart',
-        r'lib/**/*.dart',
-      ],
-      exclude: [
-        r'lib/**.sequence.mmd',
-        r'lib/**/*.sequence.mmd',
-        r'lib/gen/*.dart',
-      ],
-    ),
-    defaultOptions: const _i5.BuilderOptions(
-        <String, dynamic>{r'output_directory': r'gen/sequence'}),
-  ),
-  _i1.apply(
-    r'flutter_generator_example:diagram',
-    [_i3.diagramBuilder],
     _i1.toRoot(),
     hideOutput: false,
     defaultGenerateFor: const _i4.InputSet(
@@ -69,11 +50,11 @@ final _builders = <_i1.BuilderApplication>[
       exclude: [
         r'lib/**.md',
         r'lib/**/*.md',
-        r'lib/gen/*.dart',
+        r'gen/*.dart',
       ],
     ),
     defaultOptions: const _i5.BuilderOptions(
-        <String, dynamic>{r'output_directory': r'gen/diagram'}),
+        <String, dynamic>{r'output_directory': r'gen/sequence'}),
   ),
   _i1.apply(
     r'build_resolvers:transitive_digests',

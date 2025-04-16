@@ -1,0 +1,20 @@
+builders:
+  diagram:
+    import: "package:flutter_generator/flutter_generator.dart"
+    builder_factories: ["diagramBuilder"]
+    build_extensions:
+      "lib/{{}}.dart": ["gen/diagram/{{}}.md"]
+    auto_apply: root_package #none, dependents, all_packages, root_package
+    build_to: source #source, cache
+  
+    defaults:
+      options:
+        output_directory: "gen/diagram" # 출력 디렉토리 옵션 추가
+      generate_for:
+        include: #빌드 포함
+          - lib/*.dart
+          - lib/**/*.dart
+        exclude: #빌드 예외
+          - lib/**.md
+          - lib/**/*.md
+          - lib/gen/*.dart

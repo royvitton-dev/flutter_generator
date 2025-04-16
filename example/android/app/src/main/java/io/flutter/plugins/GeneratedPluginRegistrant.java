@@ -15,15 +15,5 @@ import io.flutter.embedding.engine.FlutterEngine;
 public final class GeneratedPluginRegistrant {
   private static final String TAG = "GeneratedPluginRegistrant";
   public static void registerWith(@NonNull FlutterEngine flutterEngine) {
-    try {
-      flutterEngine.getPlugins().add(new com.example.flutter_generator.FlutterGeneratorPlugin());
-    } catch (Exception e) {
-      Log.e(TAG, "Error registering plugin flutter_generator, com.example.flutter_generator.FlutterGeneratorPlugin", e);
-    }
-    try {
-      flutterEngine.getPlugins().add(new dev.flutter.plugins.integration_test.IntegrationTestPlugin());
-    } catch (Exception e) {
-      Log.e(TAG, "Error registering plugin integration_test, dev.flutter.plugins.integration_test.IntegrationTestPlugin", e);
-    }
   }
 }

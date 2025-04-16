@@ -1,0 +1,39 @@
+builders:
+  sequence:
+    import: "package:flutter_generator/flutter_generator.dart"
+    builder_factories: ["sequenceBuilder"] #builder_factories: ["sequenceBuilder"]
+    build_extensions:
+      "lib/{{}}.dart": ["gen/sequence/{{}}.sequence.md"]
+    auto_apply: root_package #none, dependents, all_packages, root_package
+    build_to: source #source, cache
+  
+    defaults:
+      options:
+        output_directory: "gen/sequence" # 출력 디렉토리 옵션 추가
+      generate_for: 
+          include: #빌드 포함
+            - lib/*.dart
+            - lib/**/*.dart
+          exclude: #빌드 예외
+            - lib/**.md
+            - lib/**/*.md
+            - gen/*.dart
+
+  testcode:
+    import: "package:flutter_generator/flutter_generator.dart"
+    builder_factories: ["testcodeBuilder"]
+    build_extensions:
+      "lib/{{}}.dart": ["test/{{}}_test.dart"]
+    auto_apply: root_package #none, dependents, all_packages, root_package
+    build_to: cache #source, cache
+  
+    defaults:
+      options:
+        output_directory: "test" # 출력 디렉토리 옵션 추가
+      generate_for:
+        include: #빌드 포함
+          - lib/*.dart
+          - lib/**/*.dart
+        exclude: #빌드 예외
+          - lib/**.test.dart
+          - lib/**/*.test.dart
