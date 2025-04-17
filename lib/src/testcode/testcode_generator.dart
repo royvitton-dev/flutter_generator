@@ -34,8 +34,8 @@ class TestCodeGenerator extends Generator {
 
     // 최종 파일 출력 형태
     return '''
-      import 'package:flutter_test/flutter_test.dart';
-      import '${buildStep.inputId.uri}';
+      \nimport 'package:flutter_test/flutter_test.dart';
+      \nimport '${buildStep.inputId.uri}';
 
       void main() {
         ${buffer.toString()}
@@ -72,6 +72,7 @@ class TestCodeGenerator extends Generator {
       final testCase = testCases[i];
       final params = testCase.getField('params')?.toListValue() ?? [];
       final expected = testCase.getField('expected');
+      final isNot = testCase.getField('isNot')?.toBoolValue() ?? false;
 
       final paramStr = params.map(_dartLiteral).join(', ');
       final expectedStr = _dartLiteral(expected);
@@ -81,11 +82,12 @@ class TestCodeGenerator extends Generator {
           : '$funcName($paramStr)';
 
       final setup = (!isStatic && className != null) ? 'final $instanceName = $className();\n    ' : '';
+      final expect_msg = isNot == true ? 'expect(result, isNot($expectedStr));' : 'expect(result, $expectedStr);';
 
       buffer.writeln('  test(\'$funcName case $i\', () {');
       buffer.writeln('    $setup');
       buffer.writeln('    final result = $callExpr;');
-      buffer.writeln('    expect(result, $expectedStr);');
+      buffer.writeln('    $expect_msg');
       buffer.writeln('  });\n');
     }
 

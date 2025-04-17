@@ -15,7 +15,7 @@ class Caculator {
     cases: [
       TestCase(params: [2, 1], expected: 1),
       TestCase(params: [7, 5], expected: 2),
-      TestCase(params: [5, 7], expected: 12),
+      TestCase(params: [5, 7], expected: 12, isNot: true),
     ],
   )
   double subtract(double a, double b) {
