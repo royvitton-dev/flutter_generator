@@ -1,4 +1,3 @@
-// import "package:flutter_generator/flutter_generator.dart";
 import "package:flutter_generator/testcode_annotation.dart";
 
 class Caculator {
