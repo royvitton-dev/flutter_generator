@@ -57,6 +57,25 @@ final _builders = <_i1.BuilderApplication>[
         <String, dynamic>{r'output_directory': r'gen/sequence'}),
   ),
   _i1.apply(
+    r'flutter_generator_sample:classdiagram',
+    [_i3.classdiagramBuilder],
+    _i1.toRoot(),
+    hideOutput: false,
+    defaultGenerateFor: const _i4.InputSet(
+      include: [
+        r'lib/*.dart',
+        r'lib/**/*.dart',
+      ],
+      exclude: [
+        r'lib/**.md',
+        r'lib/**/*.md',
+        r'gen/*.dart',
+      ],
+    ),
+    defaultOptions: const _i5.BuilderOptions(
+        <String, dynamic>{r'output_directory': r'gen/classdiagram'}),
+  ),
+  _i1.apply(
     r'build_resolvers:transitive_digests',
     [_i6.transitiveDigestsBuilder],
     _i1.toAllPackages(),
