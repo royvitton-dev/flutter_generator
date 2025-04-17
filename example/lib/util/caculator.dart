@@ -14,7 +14,8 @@ class Caculator {
 
   @TestCode(
     cases: [
-      TestCase(params: [1, 2], expected: 3),
+      TestCase(params: [2, 1], expected: 1),
+      TestCase(params: [7, 5], expected: 2),
       TestCase(params: [5, 7], expected: 12),
     ],
   )

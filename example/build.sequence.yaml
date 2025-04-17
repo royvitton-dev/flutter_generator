@@ -3,7 +3,7 @@ builders:
     import: "package:flutter_generator/flutter_generator.dart"
     builder_factories: ["sequenceBuilder"] #builder_factories: ["sequenceBuilder"]
     build_extensions:
-      "lib/{{}}.dart": ["gen/sequence/{{}}.seq.md"]
+      "lib/{{}}.dart": ["gen/sequence/{{}}.sequence.md"]
     auto_apply: root_package #none, dependents, all_packages, root_package
     build_to: source #source, cache
   

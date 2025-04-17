@@ -23,15 +23,15 @@ final _builders = <_i1.BuilderApplication>[
     r'flutter_generator_sample:testcode',
     [_i3.testcodeBuilder],
     _i1.toRoot(),
-    hideOutput: true,
+    hideOutput: false,
     defaultGenerateFor: const _i4.InputSet(
       include: [
         r'lib/*.dart',
         r'lib/**/*.dart',
       ],
       exclude: [
-        r'lib/**.test.dart',
-        r'lib/**/*.test.dart',
+        r'lib/**_test.dart',
+        r'lib/**/*_test.dart',
       ],
     ),
     defaultOptions: const _i5.BuilderOptions(<String, dynamic>{

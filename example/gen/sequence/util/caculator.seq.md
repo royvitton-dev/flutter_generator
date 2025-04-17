@@ -7,6 +7,7 @@ end
 par subtract()
   Caculator->>Caculator: TestCase()
   Caculator->>Caculator: TestCase()
+  Caculator->>Caculator: TestCase()
 end
 par multiply()
 end

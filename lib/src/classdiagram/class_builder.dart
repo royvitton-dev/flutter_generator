@@ -30,6 +30,10 @@ class ClassDiagramBuilder implements Builder {
     final outputPath = '$outputDir/$withoutExt$outputExtension';
 
     final outputId = AssetId(inputId.package, outputPath);
+    if (content.trim().isEmpty) {
+      // content가 비어있으면 파일을 생성하지 않음
+      return;
+    }
     await buildStep.writeAsString(outputId, content);
   }
 }

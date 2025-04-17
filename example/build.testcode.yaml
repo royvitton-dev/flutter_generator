@@ -1,22 +1,22 @@
-builders:         
+builders:
   testcode:
     import: "package:flutter_generator/flutter_generator.dart"
     builder_factories: ["testcodeBuilder"]
     build_extensions:
-      "lib/{{}}.dart": ["test/{{}}.test.dart"]
+      "lib/{{}}.dart": ["test/{{}}_test.dart"] 
     auto_apply: root_package #none, dependents, all_packages, root_package
-    build_to: cache #source, cache
+    build_to: source #source, cache
   
     defaults:
       options:
         includePrivate : true
-        output_directory: "test" # 출력 디렉토리 옵션 추가
-        qoutput_extension: "_test.dart" # 출력 확장자 옵션 추가
+        output_directory: "test" # 출력 디렉토리 옵션 추가 build_extensions 설정을 무시하고 이설정이 적용된다.
+        # output_directory: "test" # 출력 디렉토리 옵션 추가
+        output_extension: "_test.dart" # 출력 확장자 옵션 추가 build_extensions 설정을 무시하고 이설정이 적용된다.
       generate_for:
         include: #빌드 포함
           - lib/*.dart
           - lib/**/*.dart
         exclude: #빌드 예외
-          - lib/**.test.dart
-          - lib/**/*.test.dart
-          
+          - lib/**_test.dart
+          - lib/**/*_test.dart
