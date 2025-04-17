@@ -1,7 +1,8 @@
-rm -rf sequence
+rm -rf gen
+rm -rf test
 dart run build_runner clean
 
 dart run build_runner build --delete-conflicting-outputs  --verbose
 
-cat ./gen/sequence/util/login.sequence.md
+cat ./gen/sequence/util/login.seq.md
 

@@ -9,7 +9,9 @@ builders:
   
     defaults:
       options:
+        includePrivate : true
         output_directory: "gen/classdiagram" # 출력 디렉토리 옵션 추가
+        output_extension: ".class.md" # 출력 확장자 옵션 추가
       generate_for: 
           include: #빌드 포함
             - lib/*.dart
@@ -30,6 +32,7 @@ builders:
     defaults:
       options:
         output_directory: "gen/sequence" # 출력 디렉토리 옵션 추가
+        output_extension: ".seq.md" # 출력 확장자 옵션 추가
       generate_for: 
           include: #빌드 포함
             - lib/*.dart
@@ -49,7 +52,9 @@ builders:
   
     defaults:
       options:
+        includePrivate : true
         output_directory: "test" # 출력 디렉토리 옵션 추가
+        output_extension: "_test.dart" # 출력 확장자 옵션 추가
       generate_for:
         include: #빌드 포함
           - lib/*.dart

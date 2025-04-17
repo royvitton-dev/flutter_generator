@@ -7,9 +7,9 @@ import 'package:path/path.dart' as path;
 class ClassDiagramBuilder implements Builder {
   final bool includePrivate;
   final String outputDir;
-  static const outputExtension = '.md';
+  final String outputExtension;
 
-  ClassDiagramBuilder(this.includePrivate, this.outputDir);
+  ClassDiagramBuilder(this.includePrivate, this.outputDir, this.outputExtension);
 
   @override
   Map<String, List<String>> get buildExtensions => {

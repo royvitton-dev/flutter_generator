@@ -6,9 +6,9 @@ import 'generator.dart';
 
 class SequenceBuilder implements Builder {
   final String outputDir;
-  static const outputExtension = '.sequence.md';
+  final String outputExtension;
 
-  SequenceBuilder(this.outputDir);
+  SequenceBuilder(this.outputDir, this.outputExtension);
 
   @override
   Map<String, List<String>> get buildExtensions => {

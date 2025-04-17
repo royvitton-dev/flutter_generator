@@ -34,8 +34,11 @@ final _builders = <_i1.BuilderApplication>[
         r'lib/**/*.test.dart',
       ],
     ),
-    defaultOptions: const _i5.BuilderOptions(
-        <String, dynamic>{r'output_directory': r'test'}),
+    defaultOptions: const _i5.BuilderOptions(<String, dynamic>{
+      r'includePrivate': true,
+      r'output_directory': r'test',
+      r'output_extension': r'_test.dart',
+    }),
   ),
   _i1.apply(
     r'flutter_generator_sample:sequence',
@@ -53,8 +56,10 @@ final _builders = <_i1.BuilderApplication>[
         r'gen/*.dart',
       ],
     ),
-    defaultOptions: const _i5.BuilderOptions(
-        <String, dynamic>{r'output_directory': r'gen/sequence'}),
+    defaultOptions: const _i5.BuilderOptions(<String, dynamic>{
+      r'output_directory': r'gen/sequence',
+      r'output_extension': r'.seq.md',
+    }),
   ),
   _i1.apply(
     r'flutter_generator_sample:classdiagram',
@@ -72,8 +77,11 @@ final _builders = <_i1.BuilderApplication>[
         r'gen/*.dart',
       ],
     ),
-    defaultOptions: const _i5.BuilderOptions(
-        <String, dynamic>{r'output_directory': r'gen/classdiagram'}),
+    defaultOptions: const _i5.BuilderOptions(<String, dynamic>{
+      r'includePrivate': true,
+      r'output_directory': r'gen/classdiagram',
+      r'output_extension': r'.class.md',
+    }),
   ),
   _i1.apply(
     r'build_resolvers:transitive_digests',
