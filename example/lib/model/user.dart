@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:flutter_generator_sample/util/type.dart';
 
 class User {

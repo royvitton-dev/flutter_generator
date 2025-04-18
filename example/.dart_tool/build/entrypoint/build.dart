@@ -53,7 +53,7 @@ final _builders = <_i1.BuilderApplication>[
       exclude: [
         r'lib/**.md',
         r'lib/**/*.md',
-        r'gen/*.dart',
+        r'gen/**/*.dart',
       ],
     ),
     defaultOptions: const _i5.BuilderOptions(<String, dynamic>{
@@ -62,7 +62,7 @@ final _builders = <_i1.BuilderApplication>[
     }),
   ),
   _i1.apply(
-    r'flutter_generator_sample:classdiagram',
+    r'flutter_generator_sample:class',
     [_i3.classdiagramBuilder],
     _i1.toRoot(),
     hideOutput: false,
@@ -74,12 +74,12 @@ final _builders = <_i1.BuilderApplication>[
       exclude: [
         r'lib/**.md',
         r'lib/**/*.md',
-        r'gen/*.dart',
+        r'gen/**/*.dart',
       ],
     ),
     defaultOptions: const _i5.BuilderOptions(<String, dynamic>{
       r'includePrivate': true,
-      r'output_directory': r'gen/classdiagram',
+      r'output_directory': r'gen/class',
       r'output_extension': r'.class.md',
     }),
   ),
