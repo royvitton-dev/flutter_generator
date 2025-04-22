@@ -12,7 +12,6 @@ class MermaidClassDiagramGenerator extends Generator {
   @override
   FutureOr<String> generate(LibraryReader library, BuildStep buildStep) async {
     final buffer = StringBuffer();
-    buffer.writeln('```mermaid');
     buffer.writeln('classDiagram');
 
     final definedClassNames = <String>{};
@@ -76,7 +75,6 @@ class MermaidClassDiagramGenerator extends Generator {
       }
     }
 
-    buffer.writeln('```');
     return buffer.toString();
   }
 }
