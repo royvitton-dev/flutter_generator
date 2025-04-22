@@ -24,6 +24,19 @@ class MermaidClassDiagramGenerator extends Generator {
     }
 
     for (final element in library.allElements) {
+      if (element is EnumElement) {
+        final enumName = element.name;
+        buffer.writeln('enum $enumName {');
+
+        // enum 값
+        for (final value in element.fields) {
+          if (!value.isPrivate || includePrivate) {
+            buffer.writeln('  ${value.name}');
+          }
+        }
+
+        buffer.writeln('}');
+      }
       if (element is ClassElement) {
         final className = element.name;
         buffer.writeln('class $className {');
