@@ -1,4 +1,3 @@
-```mermaid
 classDiagram
 class Login {
   User user
@@ -7,4 +6,3 @@ class Login {
   String getUserType()
   bool checkUser(String name)
 }
-```

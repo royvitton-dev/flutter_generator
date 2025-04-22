@@ -1,4 +1,3 @@
-```mermaid
 classDiagram
 class Caculator {
   Caculator()
@@ -7,4 +6,3 @@ class Caculator {
   double multiply(double a, double b)
   double divide(double a, double b)
 }
-```

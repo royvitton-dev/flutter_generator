@@ -1,4 +1,3 @@
-```mermaid
 classDiagram
 class User {
   String? id
@@ -15,4 +14,3 @@ class User {
   bool isAdmin()
   Map<String, dynamic> toJson()
 }
-```

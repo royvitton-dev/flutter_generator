@@ -1,4 +1,3 @@
-```mermaid
 classDiagram
 class MyApp {
   MyApp(Key? key)
@@ -16,4 +15,3 @@ class _MyHomePageState {
   Widget build(BuildContext context)
 }
 State <|-- _MyHomePageState
-```
