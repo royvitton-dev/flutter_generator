@@ -116,7 +116,6 @@ class MermaidFolderDiagramBuilder implements Builder {
 
     final buffer = _buffersByFolder.putIfAbsent(folderName, () {
       final b = StringBuffer();
-      b.writeln('```mermaid');
       b.writeln('classDiagram');
       return b;
     });
@@ -148,9 +147,7 @@ class MermaidFolderDiagramBuilder implements Builder {
       final outputPath = 'diagram/${entry.key}.md';
       final outputId = AssetId(buildStep.inputId.package, outputPath);
 
-      entry.value.writeln('```');
       await buildStep.writeAsString(outputId, entry.value.toString());
     }
   }
 }
-
